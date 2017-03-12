@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import MyComponent from './MyComponent';
+import SignUp from './SignUp';
 
 @observer
 class App extends React.Component {
@@ -11,6 +12,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <SignUp store={this.store} />
+        <hr />
         <h2>Welcome to the {this.store.name} project.</h2>
         <h3>This project is {this.store.description}.</h3>
         <MyComponent store={this.store} />
